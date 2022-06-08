@@ -1,14 +1,28 @@
-<select (change)="selection(selectCtrl)" #selectCtrl>
-  <option value="Angular">Angular</option>
-  <option value="javascript">javascript</option>
-  <option value="jquery">jquery</option>
-  <option value="html">html</option>
-</select>
+<div class="container">
+  <div class="row justify-center mt-4">
+    <div class="col-md-6">
+      <select class="form-control" (change)="selection(selectCtrl)" #selectCtrl>
+        <option value="default">Select item</option>
+        <option value="Angular">Angular</option>
+        <option value="javascript">javascript</option>
+        <option value="jquery">jquery</option>
+        <option value="html">html</option>
+      </select>
 
-{{ selectedItem }}
-<ng-container [ngSwitch]="selectedItem">
-  <h2 *ngSwitchCase="'Angular'">Angular</h2>
-  <h2 *ngSwitchCase="'javascript'">javascript</h2>
-  <h2 *ngSwitchCase="'jquery'">jquery</h2>
-  <h2 *ngSwitchCase="'html'">html</h2>
-</ng-container>
+      <div class="clearfix"></div>
+      <ng-container [ngSwitch]="selectedItem">
+        <h2 *ngSwitchDefault></h2>
+        <h2 class="alert alert-warning my-2" *ngSwitchCase="'Angular'">
+          Angular
+        </h2>
+        <h2 class="alert alert-warning my-2" *ngSwitchCase="'javascript'">
+          javascript
+        </h2>
+        <h2 class="alert alert-warning my-2" *ngSwitchCase="'jquery'">
+          jquery
+        </h2>
+        <h2 class="alert alert-warning my-2" *ngSwitchCase="'html'">html</h2>
+      </ng-container>
+    </div>
+  </div>
+</div>
