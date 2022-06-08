@@ -54,5 +54,4 @@ export class NgForComponent implements OnInit {
   removeItem(index) {
     this.items.splice(index, 1);
   }
-  
 }

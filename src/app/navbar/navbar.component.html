@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon" (click)="toggleMenu()"></span>
+    </button>
+    <div
+      class="collapsed navbar-collapse"
+      id="navbarNavAltMarkup"
+      *ngIf="showMenu"
+    >
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
+        <a class="nav-link" routerLink="/ngswitch">Features</a>
+        <a class="nav-link" routerLink="/ngfor">Pricing</a>
+        <a class="nav-link" routerLink="/sdfds">Not Found</a>
+      </div>
+    </div>
+  </div>
+</nav>
