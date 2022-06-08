@@ -1,0 +1,14 @@
+<select (change)="selection(selectCtrl)" #selectCtrl>
+  <option value="Angular">Angular</option>
+  <option value="javascript">javascript</option>
+  <option value="jquery">jquery</option>
+  <option value="html">html</option>
+</select>
+
+{{ selectedItem }}
+<ng-container [ngSwitch]="selectedItem">
+  <h2 *ngSwitchCase="'Angular'">Angular</h2>
+  <h2 *ngSwitchCase="'javascript'">javascript</h2>
+  <h2 *ngSwitchCase="'jquery'">jquery</h2>
+  <h2 *ngSwitchCase="'html'">html</h2>
+</ng-container>
