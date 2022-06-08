@@ -37,4 +37,22 @@ export class NgForComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+
+  addItem(itemCtrl) {
+    let obj = {
+      name: itemCtrl.value,
+      price: '1000 USD',
+      quantity: 2,
+    };
+    this.items.push(obj);
+  }
+
+  removeOne() {
+    this.items.splice(this.items.length - 1);
+  }
+
+  removeItem(index) {
+    this.items.splice(index, 1);
+  }
+  
 }
