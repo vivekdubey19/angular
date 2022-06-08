@@ -5,10 +5,4 @@ import { Component, VERSION } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
-  selectedItem: any;
-
-  selection(ctrl){
-    this.selectedItem = ctrl.value;
-  }
-}
+export class AppComponent {}
